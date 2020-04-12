@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remplazar un alert</title>
+    <style type="text/css">
+        #alertar{
+            display: none;
+            background: #6e6e6e;
+            color:#f2f2f2;
+            padding: 6px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font: bold 15px Verdana;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    function alertar(mensaje){
+        var section = document.getElementById('alertar');
+        section.style.display = "block";
+        section.innerHTML = mensaje + "</br>" + section.innerHTML;
+
+    }
+</script>
+<body>
+    <button onclick="alertar('haz generado un mensaje desde el button')">Generar mensaje</button>
+    <a href="javascript: alertar('haz generado un mensaje desde el enlace')">Enlace</a>
+    <section id="alertar">JEy</section>
+</body>
+</html>
